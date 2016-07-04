@@ -15,8 +15,8 @@
 	- Если не хостинге не установлен git, можно скопировать архив с сайта https://github.com/Teplitsa/redcross.git, распаковать его и разместить содержимое на хостинге.
 	
 3. Создать базу и импортировать в нее тестовые данные:
-	- `echo 'CREATE DATABASE IF NOT EXISTS your_db_name' | mysql --user=your_db_username --password=your_db_password` Если в MySQL нет юзера, который имеет права для создания БД, то можно создать БД через административную панель хостинга.
-	- `unzip -p ./attachments/startertest.sql.zip | mysql --user=your_db_username --password=your_db_password your_db_name`
+	- `echo 'CREATE DATABASE IF NOT EXISTS your_db' | mysql --user=your_db_username --password=your_db_password` Если в MySQL нет юзера, который имеет права для создания БД, то можно создать БД через административную панель хостинга.
+	- `unzip -p ./attachments/startertest.sql.zip | mysql --user=your_db_username --password=your_db_password your_db`
 	- Если выполнить команду загрузки данных не получилось, то можно загрузить данные через панель управления хостингом, используя PHPMyAdmin. Для этого нужно импортировать данные из файла ./attachments/startertest.sql.zip.
 	
 4. Запустить: composer install если не срабатывает, то:
@@ -28,7 +28,7 @@
 	- `php5.5 -r "readfile('https://getcomposer.org/installer');" | php5.5`
 	
 5. Создать конфигурационный файл из шаблона и заполнить в нем информацию о доступе к базе данных и домен:
-	- `cat wp-config-orig.php | sed 's/dev_db/your_db_name/g;s/dev_user/your_db_username/g;s/dev_password/your_db_password/g;s/giger\.local/yourredcross\.ru/g' > wp-config.php`
+	- `cat wp-config-orig.php | sed 's/dev_db/your_db/g;s/dev_user/your_db_username/g;s/dev_password/your_db_password/g;s/giger\.local/yourredcross\.ru/g' > wp-config.php`
 	
 6. Распаковать содержимое папки с изображениями attachments/uploads.zip в wp-content/uploads:
 	- `unzip ./attachments/uploads.zip -d ./wp-content/`
