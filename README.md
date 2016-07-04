@@ -19,7 +19,7 @@
 	- `unzip -p ./attachments/startertest.sql.zip | mysql --user=your_db_username --password=your_db_password your_db`
 	- Если выполнить команду загрузки данных не получилось, то можно загрузить данные через панель управления хостингом, используя PHPMyAdmin. Для этого нужно импортировать данные из файла ./attachments/startertest.sql.zip.
 	
-4. Запустить: composer install если не срабатывает, то:
+4. Запустить: `composer install` если не срабатывает, то:
 	- скачайте composer прямо в папку сайта:
 	- `php -r "readfile('https://getcomposer.org/installer');" | php`
 	- запустите отключив ограничение памяти:
