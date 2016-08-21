@@ -346,7 +346,25 @@ jQuery(document).ready(function($){
 			//scroll
 			$('html, body').animate({scrollTop:scroll_target.top - 50}, 900);
 		}
+		$('.store_form').delay(500).queue(function (form) {
+      $('.store_bubble').hide();
+      $(this).closest('.panel-grid').css('position','relative').append('<div class="store_bubble_left animated">Заполните поля формы</div>');
+      $('.store_bubble_left').addClass("fadeIn");
+      form();
+      $(document).on("click",function(e) {
+          $('.store_bubble_left').addClass('fadeOut');
+      });
+    }).once();
 		console.log($_target_raw[0]);
 	});
 	
+  // Showing bubble after page load
+  $(document).find(".store_title").delay(1000).queue(function (next) {
+    $(this).append('<div class="store_bubble animated">Выберите Продукт</div>');
+    $('.store_bubble').addClass("fadeIn");
+    next();
+    $(document).on("click",function(e) {
+        $('.store_bubble').addClass('fadeOut');
+    });
+  });
 }); //jQuery
