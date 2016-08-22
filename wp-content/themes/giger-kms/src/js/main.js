@@ -354,7 +354,7 @@ jQuery(document).ready(function($){
       $(document).on("click",function(e) {
           $('.store_bubble_left').addClass('fadeOut');
       });
-    }).once();
+    }).one();
 		console.log($_target_raw[0]);
 	});
 	
