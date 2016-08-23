@@ -348,7 +348,7 @@ jQuery(document).ready(function($){
 		}
 		$('.store_form').delay(500).queue(function (form) {
       $('.store_bubble').hide();
-      $(this).closest('.panel-grid').css('position','relative').append('<div class="store_bubble_left animated">Заполните поля формы</div>');
+      $(this).closest('.panel-grid').css('position','relative').append('<div class="store_bubble_left animated">Шаг 2. Заполните поля формы</div>');
       $('.store_bubble_left').addClass("fadeIn");
       form();
       $(document).on("click",function(e) {
@@ -360,7 +360,7 @@ jQuery(document).ready(function($){
 	
   // Showing bubble after page load
   $(document).find(".store_title").delay(1000).queue(function (next) {
-    $(this).append('<div class="store_bubble animated">Выберите Продукт</div>');
+    $(this).append('<div class="store_bubble animated">Шаг 1. Выберите Продукт</div>');
     $('.store_bubble').addClass("fadeIn");
     next();
     $(document).on("click",function(e) {
