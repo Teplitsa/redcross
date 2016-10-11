@@ -24,6 +24,8 @@
 	- `php -r "readfile('https://getcomposer.org/installer');" | php`
 	- запустите отключив ограничение памяти:
 	- `php -d memory_limit=-1 composer.phar install`
+	- если появились сообщения об ошибках, то запустите composer update:
+	- `php -d memory_limit=-1 composer.phar update`
 	- если на сервере несколько версий php, то вместо php в этих командах нужно указывать конкретную версию:
 	- `php5.5 -r "readfile('https://getcomposer.org/installer');" | php5.5`
 	
